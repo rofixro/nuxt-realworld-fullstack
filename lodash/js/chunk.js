@@ -2,7 +2,7 @@
  * @Author: Calvest
  * @Date: 2022-03-13 12:17:44
  * @LastEditors: Calvest
- * @LastEditTime: 2022-03-13 19:24:18
+ * @LastEditTime: 2022-03-14 13:52:57
  * @FilePath: /training/Lodash/js/chunk.js
  */
 /**
@@ -22,29 +22,14 @@ function chunk(array = [], size = 1) {
                 if (size >= array.length) {
                     return array;
                 } else {
-                    let index = 0;
-                    let tmpArray = [];
-                    let targetArray = [];
-                    const remainder = array.length % size;
+                    let counter = 0;
+                    let result = new Array(Math.ceil(array.length / size));
 
-                    for (let i = 0; i < array.length; i++) {
-                        tmpArray.push(array[i]);
-                        index++;
-
-                        if (index === size) {
-                            targetArray.push(tmpArray);
-                            tmpArray = [];
-                            index = 0;
-                        }
-
-                        if (i === array.length - 1) {
-                            if (remainder > 0) {
-                                targetArray.push(tmpArray);
-                            }
-                        }
+                    for (let i = 0; i < result.length; i++) {
+                        result[i] = array.slice(counter, counter += size);
                     }
 
-                    return targetArray;
+                    return result;
                 }
             } else {
                 throw new Error("process(): Argument must be an positive integer.")
