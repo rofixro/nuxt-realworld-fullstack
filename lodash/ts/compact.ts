@@ -2,7 +2,7 @@
  * @Author: Calvest
  * @Date: 2022-03-15 02:11:36
  * @LastEditors: Calvest
- * @LastEditTime: 2022-03-15 02:16:03
+ * @LastEditTime: 2022-03-15 14:38:41
  * @FilePath: /training/lodash/ts/compact.ts
  */
 /**
@@ -10,7 +10,7 @@
  * @param {Array} array
  * @return {Array} array
  */
-function compact(array: any[] = []) {
+function compact(array: any[] = []): any[] {
     if (!Array.isArray(array)) {
         throw new Error("process(): Argument must be an array.");
     } else {
