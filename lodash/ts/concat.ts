@@ -2,7 +2,7 @@
  * @Author: Calvest
  * @Date: 2022-03-15 14:10:58
  * @LastEditors: Calvest
- * @LastEditTime: 2022-03-15 14:18:16
+ * @LastEditTime: 2022-03-15 17:27:21
  * @FilePath: /training/lodash/ts/concat.ts
  */
 /**
@@ -13,7 +13,7 @@
  */
 function concat(array: any[], ...values: any[]): any[] {
     if (!Array.isArray(array)) {
-        throw new Error();
+        throw new Error("process(): Argument must be an array.");
     } else {
         if (!values.length) {
             return array;
