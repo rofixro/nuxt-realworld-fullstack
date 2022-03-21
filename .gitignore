@@ -105,3 +105,6 @@ dist
 
 # Mac file
 .DS_Store
+
+# WebStorm file
+.idea
