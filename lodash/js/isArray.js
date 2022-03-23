@@ -2,7 +2,7 @@
  * @Author: Calvest
  * @Date: 2022-03-21 19:02:31
  * @LastEditors: Calvest
- * @LastEditTime: 2022-03-21 22:55:55
+ * @LastEditTime: 2022-03-23 18:01:27
  * @FilePath: /training/lodash/js/isArray.js
  */
 /**
@@ -12,8 +12,8 @@
  */
 function isArray(array = []) {
     if (!Array.isArray(array)) {
-        throw new Error("process(): Argument must be an array.");
+        throw new TypeError("process(): Argument must be an array.");
     } else {
-        return array;
+        return true;
     }
 }
