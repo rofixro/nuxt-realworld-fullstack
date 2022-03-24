@@ -2,7 +2,7 @@
  * @Author: Calvest
  * @Date: 2022-03-25 00:33:04
  * @LastEditors: Calvest
- * @LastEditTime: 2022-03-25 00:49:23
+ * @LastEditTime: 2022-03-25 01:19:31
  * @FilePath: /training/js-api/array/flatMap.js
  */
 /**
@@ -14,7 +14,7 @@
 function flatMap(array = [], callback) {
     if (isArray(array)) {
         if (typeof callback !== "function") {
-            throw new TypeError();
+            throw new TypeError("process(): Argument must be an function.");
         } else {
             if (!array.length) {
                 return array;
