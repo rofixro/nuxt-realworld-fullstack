@@ -1,17 +1,17 @@
 /*
  * @Author: Calvest
- * @Date: 2022-03-24 17:03:38
+ * @Date: 2022-03-24 17:18:55
  * @LastEditors: Calvest
- * @LastEditTime: 2022-03-24 17:25:48
- * @FilePath: /training/js-api/array/filter.js
+ * @LastEditTime: 2022-03-24 17:25:24
+ * @FilePath: /training/js-api/array/find.js
  */
 /**
- * @description: filter() 方法创建一个新数组, 其包含通过所提供函数实现的测试的所有元素。 
- * @param {Array} array 
+ * @description: find() 方法返回数组中满足提供的测试函数的第一个元素的值。否则返回 undefined。
+ * @param {Array} array
  * @param {Function} callback
- * @return {Array} array
+ * @return {*} value
  */
-function filter(array = [], callback) {
+function find(array = [], callback) {
     if (isArray(array)) {
         if (typeof callback !== 'function') {
             throw new TypeError("process(): Argument must be an function.");
@@ -19,15 +19,11 @@ function filter(array = [], callback) {
             if (!array.length) {
                 return array;
             } else {
-                let result = [];
-
                 for (let i = 0; i < array.length; i++) {
                     if (callback(array[i], i, array)) {
-                        result.push(array[i]);
+                        return array[i];
                     }
                 }
-
-                return result;
             }
         }
     }
