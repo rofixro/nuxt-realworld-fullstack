@@ -1,7 +1,4 @@
-# MacOS
-.DS_Store
-
-# Editor directories and files
 .idea
-.vscode/*
-!.vscode/extensions.json
+.vscode/
+.DS_Store
+node_modules/
