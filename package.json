@@ -1,18 +1,16 @@
 {
-  "name": "create-utils-cli",
-  "version": "0.0.1",
-  "description": "Quickly create a JavaScript or TypeScript tool library.",
-  "main": "index.js",
-  "scripts": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Calvest/create-utils-cli.git"
+  "name": "nuxt-app",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
   },
-  "keywords": ["javascript", "typescript", "utils", "tools", "cli"],
-  "author": "OJ Haywood",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Calvest/create-utils-cli/issues"
-  },
-  "homepage": "https://github.com/Calvest/create-utils-cli#readme"
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "@types/node": "^18.17.1",
+    "nuxt": "^3.6.5"
+  }
 }
